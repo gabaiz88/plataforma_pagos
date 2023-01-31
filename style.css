@@ -1,0 +1,127 @@
+body{
+    margin: 10% 25%;
+}
+
+.main_content{
+    max-width: 1100px;
+    width: 800px;
+    height: 600px;
+    border: solid 2px black;
+    display: flex;
+    background: rgba(207, 206, 206, 0.5);
+}
+
+.display_left{
+    margin: 20px;
+    width: 60%;
+}
+
+.payment{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin:25px 0px;
+}
+
+.display_left .payment_content{
+    background: rgb(255, 255, 255);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px ;
+}
+
+.display_left .payment_content img{
+   width: 40px;
+   height: 30px;
+}
+
+.display_left .payment_content .pay_content{
+    display: flex;
+    gap: 40px;
+}
+
+.display_left .payment_content .link_pay a{
+   font-size: larger;
+}
+
+.more_data .monthly_payments{
+    background: #fff;
+    padding: 20px;
+    margin: 25px 0 25px 0;
+}
+
+.more_data .monthly_payments h6{
+    color: #969595b2;
+    margin-left: 10px;
+}
+
+.more_data .monthly_payments .form-select{
+    color: #777676;
+    border: none;
+    border-bottom: 0.5px solid rgb(190, 190, 190);
+}
+
+.more_data .personal_data{
+    background: #fff;
+    padding: 20px;
+}
+
+.display_right{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 35%;
+}
+
+.display_right .content_right{
+    margin: 25px 20px;
+}
+
+.content_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.content_right .title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.content_right .title img{
+    width: 45px;
+    height: 40px;
+}
+
+.content_right h4{
+    font-weight: 500;
+    font-size: medium;
+}
+
+.content_right .product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 15px 0;
+    border-bottom: 1px solid #9695957e
+}
+
+.content_right .product h5{
+    color: #969595cb;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.content_right .amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content_right .pay button{
+    width: 100%;
+}
