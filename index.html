@@ -87,19 +87,25 @@
     </div>
     <div id="simpleModal" class="modal">
         <div class="modal_content">
-            <div class="card">
-                <div class="card_content">
+            <div class="container">
+                <div class="card front">
                     <div class="holder"><h2>Gabriel Aizman</h2></div>
-                        <div class="card_content_titles">
-                            <h5>Numero</h5>
-                            <h5>Vencimiento</h5>
-                        </div>
+                    <div class="front_titles">
+                        <h5>Numero</h5>
+                        <h5>Vencimiento</h5>
+                    </div>
+                    <div class="front_input">
                         <input type="text" id="inputCard"/>
                         <input type="text" id="inputDate"/>
+                    </div>
+                </div>
+                <div class="card back">
+                    <div id="rectangulo_1"></div>
                     <div class="cvv">
-                        <h5>CVV</h5>
+                        <div id="rectangulo_2"></div>
                         <input type="text" id="inputCVV"/>
                     </div>
+                    <h5>CVV</h5>
                 </div>
             </div>
         </div>
