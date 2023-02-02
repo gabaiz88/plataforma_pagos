@@ -36,6 +36,7 @@ inputCard.addEventListener("keydown", (e) => {
 
     handleImput(maskNumber, e.key, cardNumber);
     inputCard.value = cardNumber.join("");
+    
 });
 
 inputDate.addEventListener("keydown", (e) => {
@@ -55,6 +56,7 @@ inputCVV.addEventListener("keydown", (e) => {
     e.preventDefault();
     handleImput(maskCVV, e.key, cvvNumber);
     inputCVV.value = cvvNumber.join("");
+   
 });
 
 function handleImput(mask, key, arr){
@@ -82,8 +84,10 @@ function validar_date() {
     }
 }
 
-const card = document.querySelector('.card')
 
-card.addEventListener('click', function () {
-    card.classList.toggle('is-flipped');
-});
+
+//  const card = document.querySelector('.card')
+
+//  card.addEventListener('click', function () {
+//      card.classList.toggle('is-flipped');
+//  });
