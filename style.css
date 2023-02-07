@@ -44,13 +44,13 @@ body{
 
 .display_left .payment_content .link_pay button{
     font-size: 18px;
-    padding-bottom: 10px;
+    margin-top: 10px;
 }
 
 .more_data .monthly_payments{
     background: #fff;
     padding: 20px;
-    margin: 25px 0 25px 0;
+    margin: 18px 0 18px 0;
 }
 
 .more_data .monthly_payments h6{
@@ -134,6 +134,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 /*Modal*/

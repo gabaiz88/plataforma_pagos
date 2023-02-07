@@ -75,26 +75,35 @@ payment_fees.addEventListener("click", function() {
     h5_text_fees = document.createElement("h5");
     h5_mount_fees = document.createElement("h5");
     add_fees.classList.add('content_fees_');
+    var total_amount = document.getElementById("total_amount");
+    console.log(total_amount.innerHTML);
     switch (options.selectedIndex) {
         case 1:
             add_fees.innerHTML="";
             var fee = document.createTextNode(`1 cuota de`);
-            var fee_number = document.createTextNode(`$ ${importe_prueba}`)
+            var fee_number = document.createTextNode(`$ ${importe_prueba}`);
+            total_amount.innerHTML = `$${importe_prueba}`;
             break;
         case 2:
             add_fees.innerHTML="";
             var fee = document.createTextNode(`${tres_cuotas} cuotas de `);
-            var fee_number = document.createTextNode(`$${((importe_prueba * 1.1) / tres_cuotas).toFixed(2)}`)
+            var fee_number = document.createTextNode(`$${((importe_prueba * 1.1) / tres_cuotas).toFixed(2)}`);
+            var new_total = document.createTextNode(`$${importe_prueba + (importe_prueba*0.1)}`);
+            total_amount.innerHTML = new_total.textContent;
             break;
         case 3:
             add_fees.innerHTML="";
             var fee = document.createTextNode(`${seis_cuotas} cuotas de `);
-            var fee_number = document.createTextNode(`$${((importe_prueba * 1.15) / seis_cuotas).toFixed(2)}`)
+            var fee_number = document.createTextNode(`$${((importe_prueba * 1.15) / seis_cuotas).toFixed(2)}`);
+            var new_total = document.createTextNode(`$${importe_prueba + (importe_prueba*0.15)}`);
+            total_amount.innerHTML = new_total.textContent;
             break;
         case 4:
             add_fees.innerHTML="";
             var fee = document.createTextNode(`${nueve_cuotas} cuotas de `);
             var fee_number = document.createTextNode(`$${((importe_prueba * 1.2) / nueve_cuotas).toFixed(2)}`)
+            var new_total = document.createTextNode(`$${importe_prueba + (importe_prueba*0.2)}`);
+            total_amount.innerHTML = new_total.textContent;
             break;
     }
     h5_mount_fees.appendChild(fee_number);
