@@ -21,6 +21,11 @@ const inputCVV = document.querySelector("#inputCVV");
 const front = document.querySelector('.front')
 const back = document.querySelector('.back')
 const add_fees = document.getElementById('add_fees');
+const importe_prueba = 7999;
+const tres_cuotas = 3;
+const seis_cuotas = 6;
+const nueve_cuotas= 9;
+
 
 const maskNumber = '####-####-####-####';
 const maskDate = '##/##';
@@ -67,23 +72,35 @@ inputCVV.addEventListener("keydown", (e) => {
 //Listener carga de cuotas
 payment_fees.addEventListener("click", function() {
     var options = document.getElementById('payment_fees').options;
-    console.log(options.selectedIndex);
+    h5_text_fees = document.createElement("h5");
+    h5_mount_fees = document.createElement("h5");
+    add_fees.classList.add('content_fees_');
     switch (options.selectedIndex) {
         case 1:
-            console.log("caso 1 cuota");
-            var saludo = document.createTextNode("hola como va");
-            add_fees.appendChild(saludo);
+            add_fees.innerHTML="";
+            var fee = document.createTextNode(`1 cuota de`);
+            var fee_number = document.createTextNode(`$ ${importe_prueba}`)
             break;
         case 2:
-            console.log("caso 3 cuotas");
-            break
+            add_fees.innerHTML="";
+            var fee = document.createTextNode(`${tres_cuotas} cuotas de `);
+            var fee_number = document.createTextNode(`$${((importe_prueba * 1.1) / tres_cuotas).toFixed(2)}`)
+            break;
         case 3:
-            console.log("caso 6 cuotas");
-            break
+            add_fees.innerHTML="";
+            var fee = document.createTextNode(`${seis_cuotas} cuotas de `);
+            var fee_number = document.createTextNode(`$${((importe_prueba * 1.15) / seis_cuotas).toFixed(2)}`)
+            break;
         case 4:
-            console.log("caso 9 cuotas");
-            break
+            add_fees.innerHTML="";
+            var fee = document.createTextNode(`${nueve_cuotas} cuotas de `);
+            var fee_number = document.createTextNode(`$${((importe_prueba * 1.2) / nueve_cuotas).toFixed(2)}`)
+            break;
     }
+    h5_mount_fees.appendChild(fee_number);
+    h5_text_fees.appendChild(fee);
+    add_fees.appendChild(h5_text_fees);
+    add_fees.appendChild(h5_mount_fees);
 });
 
 
