@@ -34,7 +34,6 @@ body{
 }
 
 .display_left .payment_content img{
-   width: 40px;
    height: 30px;
 }
 
@@ -190,6 +189,7 @@ body{
     transform-style: preserve-3d;
     transition: 1.5s;
     backface-visibility: hidden;
+    border-radius: 20px;
 }
 
 .front{
@@ -245,17 +245,21 @@ body{
     transform: rotateY(180deg);
 } 
 
-.container:hover > .front{
+/* .container:hover > .front{
     transform: rotateY(-180deg);
 }
 
 .container:hover > .back{
     transform: rotateY(0deg);
+} */
+
+.front.is-flipped{
+    transform: rotateY(-180deg);
 }
 
-/* .card.is-flipped{
-    transform: rotateY(180deg);
-} */
+.back.is-flipped{
+    transform: rotateY(0deg);
+}
 
 .container input{
     font-size: 28px;
