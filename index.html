@@ -47,14 +47,16 @@
                 <div class="personal_data">
                     <div class="row g-3">
                         <div class="col">
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" required>
-                        </div>
-                        <div class="col">
-                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" required>
-                        </div>
-                        <div class="col-md-">
-                            <input type="email" placeholder="Email"class="form-control" id="inputEmail4" required>
-                        </div>
+                        <form action="" id="data_pay">
+                            <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" required>
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" required>
+                            </div>
+                            <div class="col-md-">
+                                <input type="email" placeholder="Email"class="form-control" id="inputEmail4" required>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -79,7 +81,7 @@
                 </div>
                 <div class="content_right_pay">
                     <div class="pay">
-                        <button type="submit" class="btn btn-primary">Pagar</button>
+                        <button type="submit" class="btn btn-primary" form="data_pay">Pagar</button>
                     </div>
                 </div>
             </div>
@@ -87,6 +89,7 @@
     </div>
     <div id="simpleModal" class="modal">
         <div class="modal_content">
+            <button class="closeBtn" onclick="closeModal()">X</button>
             <div class="container">
                 <div class="card front">
                     <div class="holder"><h2>Gabriel Aizman</h2></div>

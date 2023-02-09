@@ -167,9 +167,11 @@ body{
 }
 
 .closeBtn{
-    color:#ccc;
-    float: right;
+    color:#b7b6b6;
     font-size: 30px;
+    border: none;
+    background: #f4f4f4;
+    justify-self: right;
 }
 
 .closeBtn:hover{
